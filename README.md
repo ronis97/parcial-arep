@@ -5,3 +5,7 @@ en el que se le calcula la conjetura de Collatz a un numero dado.
 El cliente junto con la respuesta funcionando asincronamente, se puede ver a continuacion
 ![](https://github.com/ronis97/parcial-arep/blob/main/imgs/Capture1.PNG)
 ![](https://github.com/ronis97/parcial-arep/blob/main/imgs/Capture2.PNG)
+
+#### Video:
+
+[![]()](https://youtube.com/shorts/vt9wZwI8meA?feature=share)
