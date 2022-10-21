@@ -1,13 +1,28 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
+<head>
+    <title>Form Example</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
 <body>
-<h2>Collatz</h2>
-<form method="post" action="/collatzreq">
-    Number:
-    <br />
-    <input type="text" name="collatz"/>
-    <br/>
-    <input type="submit" value="Submit" />
+
+
+<h1>Collatz</h1>
+<form action="/collatzreq">
+    <input type="text" name="collatz"><br><br>
+    <input type="button" value="Submit" onclick="loadPostMsg(collatz)">
 </form>
+
+<div id="postrespmsg"></div>
+
+<script>
+            function loadPostMsg(collatz){
+                let url = "/collatzreq?collatz="+collatz.value;
+                fetch (url, {method: 'POST'})
+                    .then(x => x.text())
+                    .then(y => document.getElementById("postrespmsg").innerHTML = y);
+            }
+        </script>
 </body>
 </html>
