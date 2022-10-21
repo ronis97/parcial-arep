@@ -4,6 +4,8 @@ package edu.escuelaing.arep;
 import spark.Request;
 import spark.Response;
 
+import java.net.HttpURLConnection;
+
 import static spark.Spark.*;
 public class SparkWebServer
 {
@@ -11,8 +13,8 @@ public class SparkWebServer
     public static void main(String... args){
         staticFileLocation("/public");
         port(getPort());
-        get("hello", (req,res) -> "Hello Docker!");
         post("collatzreq", (req,res) ->getCollatz(req.queryParams("collatz")));
+
     }
 
     private static String getCollatz(String number){
@@ -40,6 +42,8 @@ public class SparkWebServer
                 + "}";
         return respuesta;
     }
+
+
     private static int getPort() {
         if (System.getenv("PORT") != null) {
             return Integer.parseInt(System.getenv("PORT"));
