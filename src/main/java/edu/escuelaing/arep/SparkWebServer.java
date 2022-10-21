@@ -1,6 +1,7 @@
 package edu.escuelaing.arep;
 
 
+import jdk.nashorn.internal.parser.JSONParser;
 import spark.Request;
 import spark.Response;
 
@@ -22,7 +23,7 @@ public class SparkWebServer
                 + "<p>"
                 +" \"operation\": \"collatzsequence\","
                 + "<p>"
-                + " \"input\":  13,"
+                + " \"input\": " + number
                 + "<p>"
                 +"output\":";
 
@@ -39,6 +40,12 @@ public class SparkWebServer
         }
         respuesta += output
                 + "<p>"
+                + "}";
+
+        String toJson = "{"
+                + "\"operation\": \"collatzsequence\","
+                + " \"input\": " + "\"" + number + "\","
+                + "\"output\"" + "\""+respuesta + "\""
                 + "}";
         return respuesta;
     }
