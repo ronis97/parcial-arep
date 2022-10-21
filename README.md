@@ -8,4 +8,5 @@ El cliente junto con la respuesta funcionando asincronamente, se puede ver a con
 
 #### Video:
 
-[![]()](https://youtube.com/shorts/vt9wZwI8meA?feature=share)
+[](https://youtube.com/shorts/vt9wZwI8meA?feature=share)
+(https://youtube.com/shorts/vt9wZwI8meA?feature=share)
